@@ -16,7 +16,7 @@ public class EmailServiceImpl  implements EmailService{
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo("sakthivel62628@gmail.com");
             message.setSubject("Query from foodies customer");
-            message.setText("Name: "+request.getName()+"/n"+"Email: "+request.getEmail()+"/n/n"+"Message:/n"+request.getMessage());
+            message.setText("Name: "+request.getName()+"\n"+"Email: "+request.getEmail()+"\n\n"+"Message:\n"+request.getMessage());
             mailSender.send(message);
         }
         catch(Exception e){
