@@ -30,4 +30,11 @@ public class AuthController {
         return new AuthenticationResponse(request.getEmail(), jwtToken);
     }
 
+    @GetMapping("/validateToken")
+    @CrossOrigin("*")
+    public ResponseEntity<String> validateToken(){
+        return ResponseEntity.ok("Token is valid");
+    }
+
+
 }
